@@ -4,15 +4,38 @@ package de.jonasw.yajsonlib;
 import java.util.*;
 import java.io.*;
 
+/*
+ * JsonOutputStream.java
+ *
+ * Copyright (C) 2011 Jonas Weber
+ *
+ * Licensed under the EUPL, Version 1.1 or – as soon they
+ * will be approved by the European Commission - subsequent
+ * versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the
+ * Licence.
+ * You may obtain a copy of the Licence at:
+ *
+ * http://ec.europa.eu/idabc/eupl 5
+ *
+ * Unless required by applicable law or agreed to in
+ * writing, software distributed under the Licence is
+ * distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ * express or implied.
+ * See the Licence for the specific language governing
+ * permissions and limitations under the Licence.
+ */
+
 /**
- * exports Objects to another Writer.
+ * exports Objects to another Stream.
  *
  * The following types are supported:
  *   * Arrays (Class.isArray() yields true)
  *   * Iterables (implements java.lang.Iterable)
  *   * Maps (implements java.util.Map).
  *
- * 
+ *
  * It works by identifying the real classes
  * of the objects given. If an Object is
  * an Array, it is printed as [ content ].
@@ -23,6 +46,11 @@ import java.io.*;
  *
  * All IOExceptions that are thrown by
  * the substream are propagated upwards.
+ *
+ * @author Jonas Weber
+ * @version 0.1
+ *
+ * Created: Thu Nov  3 22:00:10 CET 2011
  *
  */
 public class JsonOutputStream extends OutputStream

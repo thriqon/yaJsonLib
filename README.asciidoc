@@ -34,8 +34,9 @@ ToDo
 * proper number formatting
 
 
-Contact
--------
+Contact / Licensing
+-------------------
 
 Contributions are welcome, just fork and send a patch.
 
+The Licence used is the EUPL, see LICENCE for details.

@@ -1,4 +1,6 @@
 
+package de.jonasw.yajsonlib;
+
 import java.util.*;
 import junit.framework.*;
 import java.io.*;
@@ -45,8 +47,7 @@ public class JsonOutputStreamTest extends TestCase
 		Integer[] ints = {1,5,3,6,2,5,4,7,1,1};
 
 		writer.writeObject(ints); writer.close();
-		//                                       ['1','5','3','6','2','5','4','7','1','1']
-		assertTrue(baos.toString("utf8").equals("['1','5','3','6','2','5','4','7','1','1']"));
+		assertTrue(baos.toString("utf8").equals("[1,5,3,6,2,5,4,7,1,1]"));
 
 
 		Integer[] nnints = {};
@@ -67,8 +68,7 @@ public class JsonOutputStreamTest extends TestCase
 		List<Integer> ints = Arrays.asList(new Integer(1),new Integer(5),new Integer(3),new Integer(6),new Integer(2),new Integer(5),new Integer(4),new Integer(7),new Integer(1),new Integer(1));
 
 		writer.writeObject(ints); writer.close();
-		//                                       ['1','5','3','6','2','5','4','7','1','1']
-		assertTrue(baos.toString("utf8").equals("['1','5','3','6','2','5','4','7','1','1']"));
+		assertTrue(baos.toString("utf8").equals("[1,5,3,6,2,5,4,7,1,1]"));
 
 
 		Vector<Integer> nnints = new Vector<Integer>();
@@ -92,8 +92,7 @@ public class JsonOutputStreamTest extends TestCase
 		m.put("key 4", null);
 
 		writer.writeObject(m); writer.close();
-		System.out.println(baos.toString("utf8"));
-		assertTrue(baos.toString("utf8").equals("{'key 1': 'val 1', 'key 2': 'val 2', 'key 3': '4711', 'key 4': 'NULL'}"));
+		assertTrue(baos.toString("utf8").equals("{'key 1': 'val 1', 'key 2': 'val 2', 'key 3': 4711, 'key 4': 'NULL'}"));
 	}
 }
 

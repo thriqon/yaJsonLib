@@ -30,26 +30,21 @@ import java.io.*;
 
 public class JsonOutputStreamTest extends TestCase
 {
-	public JsonOutputStreamTest()
-	{
-		super();
-	}
-
-	class SomeClassWithToString
-	{
-		@Override
-		public String toString()
-		{
-			return "SomeClassWithToString";
-		}
-	}
-
 	public void testObject() throws IOException
 	{
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		JsonOutputStream writer = new JsonOutputStream(baos);
 
-		writer.writeObject(new SomeClassWithToString());
+		writer.writeObject(
+				new Object() {
+					@Override
+					public String toString()
+					{
+						return "SomeClassWithToString";
+					}
+				}
+		);
+
 		writer.close();
 
 		assertTrue(baos.toString("utf8").equals("'SomeClassWithToString'"));

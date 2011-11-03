@@ -1,4 +1,5 @@
 
+
 all: jsonoutputstream
 
 test: jsonoutputstreamtest
@@ -10,7 +11,7 @@ de/jonasw/yajsonlib/JsonOutputStream.class: de/jonasw/yajsonlib/JsonOutputStream
 	javac de/jonasw/yajsonlib/JsonOutputStream.java
 
 de/jonasw/yajsonlib/JsonOutputStreamTest.class: de/jonasw/yajsonlib/JsonOutputStreamTest.java
-	javac -Xlint:unchecked -cp /usr/share/java/junit.jar:. de/jonasw/yajsonlib/JsonOutputStreamTest.java
+	javac -cp /usr/share/java/junit.jar:. de/jonasw/yajsonlib/JsonOutputStreamTest.java
 
 
 

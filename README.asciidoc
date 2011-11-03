@@ -1,0 +1,41 @@
+
+yaJsonLib
+=========
+
+This is yet another Json-Library for Java. It is very simple, and fits
+nicely into the Java stream system.
+
+
+Usage
+-----
+
+It can be used like an ObjectOutputStream. Objects are written to
+the stream using writeObject(Object).
+
+Recognized Interfaces
+~~~~~~~~~~~~~~~~~~~~~
+
+The JSON-types are mapped according to the following list:
+
+Arrays::
+	Iterable<T>
+	Object[]
+
+Object::
+	Map<K,V>
+
+String::
+	all other types
+
+
+ToDo
+----
+
+* proper number formatting
+
+
+Contact
+-------
+
+Contributions are welcome, just fork and send a patch.
+

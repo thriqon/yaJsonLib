@@ -1,9 +1,10 @@
 
-package de.jonasw.yajsonlib;
+package test;
 
 import java.util.*;
 import junit.framework.*;
 import java.io.*;
+import de.jonasw.yajsonlib.*;
 
 /*
  * JsonOutputStreamTest.java
